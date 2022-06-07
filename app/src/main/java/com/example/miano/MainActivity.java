@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
                         ImageView viewview = (ImageView) findViewById(R.id.image_view);
                         viewview.setImageBitmap(bm);
                     }
+
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
@@ -302,6 +303,17 @@ public class MainActivity extends AppCompatActivity {
                         String id;
                         id = etID.getText().toString();
 
+                        StorageReference storageReference;
+                        storageReference = FirebaseStorage.getInstance().getReference();
+                        StorageReference islandRef = storageReference.child("my images/"+etID.getText());
+
+                        islandRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.e("Picture","#deleted");
+                            }
+                        });
+
 
                         myRef.child(id).removeValue();
                         addValueListener();
@@ -358,7 +370,7 @@ public class MainActivity extends AppCompatActivity {
             String id = etID.getText().toString();
             String name = etName.getText().toString();
             StorageReference uploadRef = FirebaseStorage.getInstance().getReference().child("my images/"+ id);
-            ProductsRef = FirebaseDatabase.getInstance().getReference().child("Flowers");
+            ProductsRef = FirebaseDatabase.getInstance().getReference().child("peanuts");
 
 
 
