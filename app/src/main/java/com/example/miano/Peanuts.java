@@ -1,4 +1,4 @@
-package com.example.lee;
+package com.example.miano;
 
 public class Peanuts {
     private String id, name, quantity, type, price,image;

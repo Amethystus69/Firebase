@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lee">
+    package="com.example.miano">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Lusay">
 
         <activity
-            android:name="com.example.lee.Login"
+            android:name="com.example.miano.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +21,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.lee.MainActivity"
+            android:name="com.example.miano.MainActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name="com.example.lee.Registration"
+            android:name="com.example.miano.Registration"
             android:exported="true">
         </activity>
 

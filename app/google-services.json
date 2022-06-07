@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "109478858791",
-    "project_id": "eldroid-fce26",
-    "storage_bucket": "eldroid-fce26.appspot.com"
+    "project_number": "837082484737",
+    "project_id": "miano-eldroid-project",
+    "storage_bucket": "miano-eldroid-project.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:109478858791:android:09978bedf6fff2b18cbe02",
+        "mobilesdk_app_id": "1:837082484737:android:8ccb6b3ddef189578cb000",
         "android_client_info": {
-          "package_name": "com.example.lee"
+          "package_name": "com.example.miano"
         }
       },
       "oauth_client": [
         {
-          "client_id": "109478858791-4abu0emdpd9f1tfqpkof5teot6kkcqdk.apps.googleusercontent.com",
+          "client_id": "837082484737-5mh27rvdech1m4d3ml1vsbbigeoprhq2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDtelj4_YfnlKxYwQmdMC9OIpglj2EzDY0"
+          "current_key": "AIzaSyBmzbfhPTdLnxQ1UAJ7WBdhdZhB3TuXtAA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "109478858791-4abu0emdpd9f1tfqpkof5teot6kkcqdk.apps.googleusercontent.com",
+              "client_id": "837082484737-5mh27rvdech1m4d3ml1vsbbigeoprhq2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
