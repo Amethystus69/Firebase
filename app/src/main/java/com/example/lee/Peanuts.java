@@ -1,11 +1,11 @@
 package com.example.lee;
 
-public class Flower {
+public class Peanuts {
     private String id, name, quantity, type, price,image;
-public Flower(){
+public Peanuts(){
 
 }
-    public Flower(String id, String name, String quantity, String type, String price) {
+    public Peanuts(String id, String name, String quantity, String type, String price) {
         this.id = id;
         this.name = name;
         this.quantity= quantity;

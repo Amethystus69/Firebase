@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
 
     Button cmdAdd, cmdSearch, cmdDelete, cmdUpdate, viewAll;
     EditText etID, etName, etQuantity, price, type;
-    ArrayList<Flower> flowers = new ArrayList<>();
+    ArrayList<Peanuts> peanuts = new ArrayList<>();
     private StorageReference ProductImagesRef;
     private Uri ImageUri;
     private static final int GalleryPick = 1;
     private String productRandomKey, downloadImageUrl;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef= database.getReference("Flowers");
+    DatabaseReference myRef= database.getReference("peanuts");
     private ImageView InputProductImage;
     ImageView imgview;
     private String CategoryName;
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ProductsRef = FirebaseDatabase.getInstance().getReference().child("Flowers");
+        ProductsRef = FirebaseDatabase.getInstance().getReference().child("peanuts");
         ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");
 
         InputProductImage = (ImageView) findViewById(R.id.image_view);
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (TextUtils.isEmpty(etID.getText().toString()))
             {
-                Toast.makeText(MainActivity.this, "Please input the flower ID", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Please input the peanuts ID", Toast.LENGTH_SHORT).show();
             }
             else
             {
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
                 int flag = 0;
-                for (Flower s : flowers)
+                for (Peanuts s : peanuts)
                 {
                     if (s.getId().compareTo(etID.getText().toString()) == 0) {
 
@@ -208,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
             else
             {
                 int flag = 0;
-                for (Flower s : flowers) {
+                for (Peanuts s : peanuts) {
                     if (s.getId().compareTo(etID.getText().toString()) == 0) {
                         Toast.makeText(MainActivity.this, "Already exist", Toast.LENGTH_SHORT).show();
                         flag = 1;
@@ -225,9 +225,9 @@ public class MainActivity extends AppCompatActivity {
                     price1 = price.getText().toString();
 
 
-                    Flower flower = new Flower(id, name, quantity, type1, price1);
+                    Peanuts peanuts = new Peanuts(id, name, quantity, type1, price1);
 
-                    myRef.child(id).setValue(flower);
+                    myRef.child(id).setValue(peanuts);
                     uploadPhoto();
                     addValueListener();
                     Toast.makeText(MainActivity.this, "Data Added", Toast.LENGTH_SHORT).show();
@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
             else
             {
                 int flag = 0;
-                for (Flower s : flowers)
+                for (Peanuts s : peanuts)
                 {
                     if (s.getId().compareTo(etID.getText().toString()) == 0) {
                         String id, name, quantity, type1, price1,images;
@@ -266,8 +266,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                        Flower flower = new Flower(id, name, quantity, type1, price1);
-                        myRef.child(id).setValue(flower);
+                        Peanuts peanuts = new Peanuts(id, name, quantity, type1, price1);
+                        myRef.child(id).setValue(peanuts);
 
                         addValueListener();
                         uploadPhoto();
@@ -299,7 +299,7 @@ public class MainActivity extends AppCompatActivity {
             }
             else {
                 int flag = 0;
-                for (Flower s : flowers)
+                for (Peanuts s : peanuts)
                 {
                     if (s.getId().compareTo(etID.getText().toString()) == 0) {
                         String id;
@@ -399,7 +399,7 @@ public class MainActivity extends AppCompatActivity {
             }
             else {
                 for(DataSnapshot ds:task.getResult().getChildren()){
-                    flowers.add(ds.getValue(Flower.class));
+                    peanuts.add(ds.getValue(Peanuts.class));
 
                 }
             }
